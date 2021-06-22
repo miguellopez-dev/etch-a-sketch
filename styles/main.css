@@ -1,0 +1,42 @@
+.grid__container {
+  width: 250px;
+  margin: auto;
+  border: 5px solid #000;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.grid__row {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #000;
+}
+
+.title {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main-container {
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */
