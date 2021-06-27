@@ -1,5 +1,5 @@
 const gridContainer = document.querySelector('.grid__container');
-let gridSize = 16;
+let gridSize = 64;
 
 for (i = 0; i < gridSize * gridSize; i++) {
 	const gridDiv = document.createElement('div');
@@ -7,11 +7,12 @@ for (i = 0; i < gridSize * gridSize; i++) {
 	gridContainer.prepend(gridDiv);
 }
 
-gridContainer.style.width = gridSize * gridSize + 10 + 'px';
+console.log(gridContainer.classList);
+gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 
 const square = document.querySelectorAll('.grid__row');
 square.forEach((element) => {
 	element.addEventListener('mouseover', function (e) {
-		console.log((e.target.style.backgroundColor = 'blue'));
+		e.target.style.backgroundColor = 'blue';
 	});
 });

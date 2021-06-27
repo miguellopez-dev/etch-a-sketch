@@ -1,18 +1,14 @@
 .grid__container {
-  width: 250px;
+  max-width: 50rem;
+  min-height: 50rem;
   margin: auto;
   border: 5px solid #000;
   border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
 }
 
 .grid__row {
-  width: 16px;
-  height: 16px;
   border: 1px solid #000;
 }
 
