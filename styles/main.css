@@ -18,6 +18,28 @@
   text-align: center;
 }
 
+.settings {
+  text-align: center;
+  margin: 3rem;
+}
+
+.settings button {
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 0.5rem;
+  background-color: #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.settings button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #000;
+  color: #fff;
+}
+
 *::before,
 *::after,
 * {
@@ -33,6 +55,7 @@ html {
 }
 
 .main-container {
+  margin-top: 2rem;
   width: 100%;
 }
 /*# sourceMappingURL=main.css.map */
