@@ -26,8 +26,14 @@ const resetGrid = function () {
 
 const reset = function () {
 	gridSize = prompt('Pick a grid size of 1 - 100.');
-	resetGrid();
-	makeGrid();
+	if (gridSize >= 1 && gridSize <= 100) {
+		resetGrid();
+		makeGrid();
+	} else if (gridSize === null) {
+		return;
+	} else {
+		reset();
+	}
 };
 
 makeGrid();
