@@ -12,9 +12,30 @@ let makeGrid = function () {
 
 	square.forEach((element) => {
 		element.addEventListener('mouseover', function (e) {
-			e.target.style.backgroundColor = 'blue';
+			const backGroundC = e.target.style.backgroundColor;
+			if (!e.target.hasAttribute('style')) {
+				e.target.style.backgroundColor = `rgb(${Math.floor(
+					Math.random() * 300
+				)}, ${Math.floor(Math.random() * 300)}, ${Math.floor(
+					Math.random() * 300
+				)})`;
+			} else {
+				const backGroundSplit = backGroundC.substring(
+					backGroundC.lastIndexOf('(') + 1,
+					backGroundC.lastIndexOf(')')
+				);
+				const rgbColors = backGroundSplit.split(',').map(Number);
+				e.target.style.backgroundColor = `rgb(${subtractPercent(rgbColors[0])}, 
+				${subtractPercent(rgbColors[1])}, 
+				${subtractPercent(rgbColors[2])})`;
+			}
 		});
 	});
+};
+
+const subtractPercent = function (rgb) {
+	let total = rgb * 0.2;
+	return rgb - total;
 };
 
 const resetGrid = function () {
